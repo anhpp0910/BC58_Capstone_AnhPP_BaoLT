@@ -7,12 +7,12 @@ $title-font-size: 30px;
 $text-font-size: 16px;
 
 @mixin btn-style {
-  background-color: $background-color-2;
   padding: 12px 35px;
   letter-spacing: 1px;
   font-weight: 500;
   border-radius: 0px;
-  color: $text-color-2;
+  color: $background-color-2;
+  background-color: $text-color-2;
   outline: none;
   transition: all 0.5s;
 }
@@ -44,12 +44,29 @@ section.home {
     border-radius: 10px;
     padding: 50px;
     transition: all 0.5s;
+    @media screen and (max-width: 768px) {
+      padding: 30px;
+    }
     i {
       font-size: 200px;
       text-align: center;
+      @media screen and (max-width: 1200px) {
+        font-size: 150px;
+      }
+      @media screen and (max-width: 768px) {
+        font-size: 100px;
+      }
     }
     h1 {
       margin-top: 50px;
+      @media screen and (max-width: 1200px) {
+        font-size: 30px;
+        margin-top: 30px;
+      }
+      @media screen and (max-width: 768px) {
+        font-size: 24px;
+        margin-top: 30px;
+      }
     }
     &:hover {
       transform: translateY(-30px);
@@ -60,23 +77,47 @@ section.home {
 header {
   background-color: $background-color-1;
   background-image: $background-gradient;
-  height: 100px;
+  padding: 25px 0;
   display: flex;
   position: sticky;
   top: 0;
   z-index: 100;
+  @media screen and (max-width: 992px) {
+    padding: 20px 0;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 16px 0;
+  }
 
   a {
     text-decoration: none;
     color: $text-color-1;
     font-size: $title-font-size;
     transition: all 0.5s;
+    @media screen and (max-width: 992px) {
+      font-size: 24px;
+    }
+    @media screen and (max-width: 768px) {
+      font-size: 20px;
+    }
+    @media screen and (max-width: 576px) {
+      font-size: 16px;
+    }
   }
 
   .header__logo a {
     color: $text-color-2;
     font-size: 40px;
     font-weight: 900;
+    @media screen and (max-width: 992px) {
+      font-size: 36px;
+    }
+    @media screen and (max-width: 768px) {
+      font-size: 30px;
+    }
+    @media screen and (max-width: 576px) {
+      font-size: 28px;
+    }
   }
 
   .header__page {
@@ -86,6 +127,15 @@ header {
 
   .header__page a {
     margin-right: 50px;
+    @media screen and (max-width: 992px) {
+      margin-right: 24px;
+    }
+    @media screen and (max-width: 768px) {
+      margin-right: 16px;
+    }
+    @media screen and (max-width: 768px) {
+      margin-right: 12px;
+    }
   }
 
   .header__page,
@@ -112,6 +162,14 @@ footer {
   background-image: $background-gradient;
   color: $text-color-1;
   padding: 30px;
+  line-height: 1.5rem;
+  @media screen and (max-width: 768px) {
+    font-size: 14px;
+  }
+  @media screen and (max-width: 576px) {
+    font-size: 12px;
+    line-height: 1rem;
+  }
   a {
     text-decoration: none;
     transition: all 0.5s;
@@ -119,13 +177,37 @@ footer {
   h3 {
     color: $text-color-2;
     font-size: $title-font-size;
+    @media screen and (max-width: 992px) {
+      font-size: 24px;
+    }
+    @media screen and (max-width: 768px) {
+      font-size: 20px;
+    }
+    @media screen and (max-width: 576px) {
+      font-size: 16px;
+    }
   }
 
-  .footer__top {
-    padding-left: 150px;
+  .footer__grid {
+    padding-left: 50px;
   }
 
-  .footer__link,
+  .footer__content {
+    p {
+      margin-bottom: 0;
+    }
+    @media screen and (max-width: 992px) {
+      margin-bottom: 2.5rem;
+    }
+    @media screen and (max-width: 576px) {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  .footer__link {
+    margin-bottom: 0.8rem;
+  }
+
   .footer__contact {
     i {
       width: $title-font-size;
@@ -137,10 +219,19 @@ footer {
 
   .footer__form {
     margin: 50px;
+    @media screen and (max-width: 992px) {
+      margin: 0 0 30px 46px;
+    }
+    @media screen and (max-width: 576px) {
+      margin: 0 0 30px 0;
+    }
     label {
       color: $text-color-2;
       font-size: $title-font-size;
       font-weight: 500;
+      @media screen and (max-width: 992px) {
+        font-size: 24px;
+      }
     }
     input {
       padding: 14px;
@@ -155,6 +246,13 @@ footer {
       &:hover {
         color: $background-color-2 !important;
         background-color: $text-color-2 !important;
+        opacity: 0.8 !important;
+      }
+      @media screen and (max-width: 992px) {
+        transform: translateX(-30px);
+      }
+      @media screen and (max-width: 768px) {
+        transform: translateX(0);
       }
     }
   }
