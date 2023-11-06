@@ -61,7 +61,30 @@
     </header>
 
     <section class="admin">
-      <!-- Body placed here -->
+      <main role="main" class="mt-5">
+        <div class="d-flex justify-content-between mb-2 py-3 px-2 phoneBanner">
+          <h3 class="text-light">Phone Management</h3>
+          <div class="text-right">
+            <button type="button" class="btn btn-banner" id="addPhoneForm">
+              <i class="fa-solid fa-circle-plus me-2"></i> Add Phone
+            </button>
+          </div>
+        </div>
+        <table class="table display" id="myTable">
+          <thead class="">
+            <tr> 
+              <th>#</th>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Photo</th>
+              <th>Discription</th>
+              <th><em class="fa fa-cog"></em> Action</th>
+            </tr>
+          </thead>
+          <tbody id="tablePhone">
+          </tbody>
+        </table>
+      </main>
     </section>
 
     <footer>
