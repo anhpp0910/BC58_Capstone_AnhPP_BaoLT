@@ -34,6 +34,7 @@
   </head>
 
   <body>
+    <!-- HEADER -->
     <header>
       <div
         class="header__top d-flex justify-content-around align-items-center container-fluid"
@@ -55,30 +56,43 @@
           </a>
         </div>
         <div class="header__cart">
-          <a href="#"><i class="fa-solid fa-cart-shopping"></i> CART</a>
+          <!-- <a href="#"><i class="fa-solid fa-cart-shopping"></i> CART</a> -->
         </div>
       </div>
     </header>
 
+    <!-- PHONE MANAGEMENT BAR -->
     <section class="admin">
       <main role="main" class="mt-5">
-        <div class="d-flex justify-content-between mb-2 py-3 px-2 phoneBanner">
-          <h3 class="text-light">Phone Management</h3>
-          <div class="text-right">
-            <button type="button" class="btn btn-banner" id="addPhoneForm">
-              <i class="fa-solid fa-circle-plus me-2"></i> Add Phone
+        <div
+          class="d-flex justify-content-between align-items-center mb-2 py-3 px-3 phoneBanner"
+        >
+          <h3>Phone Management</h3>
+          <div>
+            <button
+              type="btn"
+              class="btn"
+              id="btnAddPhone"
+              data-bs-toggle="modal"
+              data-bs-target="#myModal"
+            >
+              <i class="fa-solid fa-circle-plus me-2"></i>Add Phone
             </button>
           </div>
         </div>
         <table class="table display" id="myTable">
-          <thead class="">
+          <thead>
             <tr>
               <th>#</th>
               <th>Name</th>
               <th>Price</th>
-              <th>Photo</th>
-              <th>Discription</th>
-              <th><em class="fa fa-cog"></em> Action</th>
+              <th>Screen</th>
+              <th>Back Camera</th>
+              <th>Front Camera</th>
+              <th>Image</th>
+              <th>Description</th>
+              <th>Brand</th>
+              <th><i class="fa fa-cog"></i> Action</th>
             </tr>
           </thead>
           <tbody id="tablePhone"></tbody>
@@ -86,6 +100,7 @@
       </main>
     </section>
 
+    <!-- FOOTER -->
     <footer>
       <div class="footer__top">
         <div class="container">
@@ -167,7 +182,6 @@
           </div>
         </div>
       </div>
-
       <div class="footer__bottom">
         <div>
           &#169;2023 All rights reserved | Design by
@@ -175,6 +189,195 @@
         </div>
       </div>
     </footer>
+
+    <!-- MODAL -->
+    <div
+      class="modal fade"
+      id="myModal"
+      data-keyboard="false"
+      data-backdrop="static"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="head-form mb-0">
+            <h2 id="header-title" class="text-center">Phone Information</h2>
+          </div>
+
+          <!-- MODAL BODY -->
+          <div class="modal-body">
+            <form role="form">
+              <div class="form-group">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text form-icon spIcon"
+                      ><i class="fa fa-mobile-alt"></i
+                    ></span>
+                  </div>
+                  <input
+                    type="text"
+                    name="phoneName"
+                    id="phoneName"
+                    class="form-control input-sm"
+                    placeholder="Phone Name"
+                  />
+                </div>
+                <span class="sp-thongbao" id="tbPhoneName"></span>
+              </div>
+
+              <div class="form-group">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text form-icon spIcon"
+                      ><i class="fa fa-dollar-sign"></i
+                    ></span>
+                  </div>
+                  <input
+                    type="text"
+                    name="price"
+                    id="price"
+                    class="form-control input-sm"
+                    placeholder="Price"
+                  />
+                </div>
+                <span class="sp-thongbao" id="tbPrice"></span>
+              </div>
+
+              <div class="form-group">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text form-icon spIcon"
+                      ><i class="fa fa-mobile-alt"></i
+                    ></span>
+                  </div>
+                  <input
+                    type="text"
+                    name="screen"
+                    id="screen"
+                    class="form-control input-sm"
+                    placeholder="Screen"
+                  />
+                </div>
+
+                <span class="sp-thongbao" id="tbScreen"></span>
+              </div>
+
+              <div class="form-group">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text form-icon spIcon"
+                      ><i class="fa fa-camera"></i
+                    ></span>
+                  </div>
+                  <input
+                    type="text"
+                    name="backCamera"
+                    id="backCamera"
+                    class="form-control input-sm"
+                    placeholder="Back Camera"
+                  />
+                </div>
+                <span class="sp-thongbao" id="tbBackCamera"></span>
+              </div>
+
+              <div class="form-group">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text form-icon spIcon"
+                      ><i class="fa fa-camera"></i
+                    ></span>
+                  </div>
+                  <input
+                    type="text"
+                    name="frontCamera"
+                    id="frontCamera"
+                    class="form-control input-sm"
+                    placeholder="Front Camera"
+                  />
+                </div>
+
+                <span class="sp-thongbao" id="tbFrontCamera"></span>
+              </div>
+
+              <div class="form-group">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text form-icon spIcon"
+                      ><i class="fa fa-link"></i
+                    ></span>
+                  </div>
+                  <input
+                    type="text"
+                    name="image"
+                    id="image"
+                    class="form-control input-sm"
+                    placeholder="Image Link"
+                  />
+                </div>
+                <span class="sp-thongbao" id="tbImage"></span>
+              </div>
+
+              <div class="form-group">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text form-icon spIcon"
+                      ><i class="fa fa-comment"></i
+                    ></span>
+                  </div>
+                  <input
+                    type="text"
+                    name="desc"
+                    id="desc"
+                    class="form-control input-sm"
+                    placeholder="Description"
+                  />
+                </div>
+                <span class="sp-thongbao" id="tbDesc"></span>
+              </div>
+
+              <div class="form-group">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text form-icon spIcon"
+                      ><i class="fa fa-signature"></i
+                    ></span>
+                  </div>
+                  <select class="form-control" id="chucVu">
+                    <option value="">Select Brand</option>
+                    <option value="Apple">Apple</option>
+                    <option value="Samsung">Samsung</option>
+                  </select>
+                </div>
+                <span class="sp-thongbao" id="tbBrand"></span>
+              </div>
+            </form>
+          </div>
+
+          <!-- MODAL FOOTER -->
+          <div class="modal-footer" id="modal-footer">
+            <button id="btnAdd" type="button" class="btn btn-primary">
+              Add
+            </button>
+            <button
+              id="btnUpdate"
+              type="button"
+              class="btn btn-success"
+              disabled="true"
+            >
+              Update
+            </button>
+            <button
+              id="btnClose"
+              type="button"
+              class="btn btn-danger"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Bootstrap JavaScript Libraries -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"

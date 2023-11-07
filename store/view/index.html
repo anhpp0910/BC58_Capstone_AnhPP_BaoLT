@@ -34,9 +34,10 @@
   </head>
 
   <body>
+    <!-- HEADER -->
     <header>
       <div
-        class="header__top d-flex justify-content-around align-items-center container-fluid"
+        class="d-flex justify-content-around align-items-center container-fluid"
       >
         <div class="header__logo">
           <a href="#">
@@ -55,34 +56,282 @@
           </a>
         </div>
         <div class="header__cart">
+          <div class="cartQty"><span class="spCartQty">3</span></div>
           <a href="#"><i class="fa-solid fa-cart-shopping"></i> CART</a>
         </div>
       </div>
     </header>
 
-    <section class="store">
-      <div class="container" id="content-wrap">
-        <main role="main" class="pb-5 mb-5">
-          <div class="container">
-            <div class="my-5">
-              <div class="container">
-                <select
-                  class="form-select w-25 mb-5"
-                  id="selectList"
-                  aria-label="Default select example"
-                >
-                  <option value="all">All Brands</option>
-                  <option value="Apple">Apple</option>
-                  <option value="Samsung">Samsung</option>
-                </select>
-              </div>
-              <div class="row mx-0 gy-4" id="phoneList"></div>
+    <!-- CAROUSEL -->
+    <section class="myCarousel">
+      <div
+        id="carouselExampleDark"
+        class="carousel carousel-dark slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img src="/asset/img/carousel1.jpg" class="d-block w-100" />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Get the highlights</h5>
+              <p>
+                The innovative new design features back glass that has color
+                infused throughout the material. A custom dual ion-exchange
+                process for the glass, and an aerospace-grade aluminum
+                enclosure, help make iPhone 15 incredibly durable.
+              </p>
             </div>
           </div>
-        </main>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="/asset/img/carousel2.jpg" class="d-block w-100" />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Take a closer look</h5>
+              <p>
+                The innovative new design features back glass that has color
+                infused throughout the material. A custom dual ion-exchange
+                process for the glass, and an aerospace-grade aluminum
+                enclosure, help make iPhone 15 incredibly durable.
+              </p>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleDark"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleDark"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
     </section>
 
+    <!-- PRODUCTS -->
+    <section class="products py-5 my-5 text-center">
+      <div class="container">
+        <h2 class="display-6 fw-bold">- Featured Products -</h2>
+        <div class="products__tab">
+          <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link active"
+                id="pills-all-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-all"
+                type="button"
+                role="tab"
+                aria-controls="pills-all"
+                aria-selected="true"
+              >
+                All Brands
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="pills-illustration-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-illustration"
+                type="button"
+                role="tab"
+                aria-controls="pills-illustration"
+                aria-selected="false"
+              >
+                Apple
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="pills-photography-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-photography"
+                type="button"
+                role="tab"
+                aria-controls="pills-photography"
+                aria-selected="false"
+              >
+                Samsung
+              </button>
+            </li>
+          </ul>
+          <div class="tab-content" id="pills-tabContent">
+            <div
+              class="tab-pane fade show mx-5 active"
+              id="pills-all"
+              role="tabpanel"
+              aria-labelledby="pills-all-tab"
+            >
+              <div class="row products__item">
+                <div class="col-6 col-lg-4">
+                  <div class="card">
+                    <img src="/asset/img/ip15.jpg" class="card-img-top" />
+                    <div class="card-body">
+                      <h5 class="card-title phoneName">
+                        <i class="fab fa-apple"></i> iPhone15
+                      </h5>
+                      <p class="card-text desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      </p>
+                      <p class="price">$799</p>
+                      <div class="buy">
+                        <button class="btn btn-buy">
+                          <i class="fa fa-shopping-cart"></i> Buy now
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-6 col-lg-4">
+                  <div class="card">
+                    <img src="/asset/img/ip15.jpg" class="card-img-top" />
+                    <div class="card-body">
+                      <h5 class="card-title phoneName">
+                        <i class="fab fa-apple"></i> iPhone15
+                      </h5>
+                      <p class="card-text desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      </p>
+                      <p class="price">$799</p>
+                      <div class="buy">
+                        <button class="btn btn-buy">
+                          <i class="fa fa-shopping-cart"></i> Buy now
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-6 col-lg-4">
+                  <div class="card">
+                    <img src="/asset/img/ip15.jpg" class="card-img-top" />
+                    <div class="card-body">
+                      <h5 class="card-title phoneName">
+                        <i class="fab fa-apple"></i> iPhone15
+                      </h5>
+                      <p class="card-text desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      </p>
+                      <p class="price">$799</p>
+                      <div class="buy">
+                        <button class="btn btn-buy">
+                          <i class="fa fa-shopping-cart"></i> Buy now
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-6 col-lg-4">
+                  <div class="card">
+                    <img src="/asset/img/ip15.jpg" class="card-img-top" />
+                    <div class="card-body">
+                      <h5 class="card-title phoneName">
+                        <i class="fab fa-apple"></i> iPhone15
+                      </h5>
+                      <p class="card-text desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      </p>
+                      <p class="price">$799</p>
+                      <div class="buy">
+                        <button class="btn btn-buy">
+                          <i class="fa fa-shopping-cart"></i> Buy now
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-6 col-lg-4">
+                  <div class="card">
+                    <img src="/asset/img/ip15.jpg" class="card-img-top" />
+                    <div class="card-body">
+                      <h5 class="card-title phoneName">
+                        <i class="fab fa-apple"></i> iPhone15
+                      </h5>
+                      <p class="card-text desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      </p>
+                      <p class="price">$799</p>
+                      <div class="buy">
+                        <button class="btn btn-buy">
+                          <i class="fa fa-shopping-cart"></i> Buy now
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-6 col-lg-4">
+                  <div class="card">
+                    <img src="/asset/img/ip15.jpg" class="card-img-top" />
+                    <div class="card-body">
+                      <h5 class="card-title phoneName">
+                        <i class="fab fa-apple"></i> iPhone15
+                      </h5>
+                      <p class="card-text desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      </p>
+                      <p class="price">$799</p>
+                      <div class="buy">
+                        <button class="btn btn-buy">
+                          <i class="fa fa-shopping-cart"></i> Buy now
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="pills-illustration"
+              role="tabpanel"
+              aria-labelledby="pills-illustration-tab"
+            >
+              Apple Filter
+            </div>
+            <div
+              class="tab-pane fade"
+              id="pills-photography"
+              role="tabpanel"
+              aria-labelledby="pills-photography-tab"
+            >
+              Samsung Filter
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
     <footer>
       <div class="footer__top">
         <div class="container">
