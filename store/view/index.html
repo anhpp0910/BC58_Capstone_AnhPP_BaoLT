@@ -30,7 +30,7 @@
       rel="stylesheet"
     />
     <!-- Main CSS -->
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/asset/css/style.css" />
   </head>
 
   <body>
@@ -57,7 +57,13 @@
         </div>
         <div class="header__cart">
           <div class="cartQty"><span class="spCartQty">3</span></div>
-          <a href="#"><i class="fa-solid fa-cart-shopping"></i> CART</a>
+          <a
+            href="#"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasRight"
+            aria-controls="offcanvasRight"
+            ><i class="fa-solid fa-cart-shopping"></i> CART</a
+          >
         </div>
       </div>
     </header>
@@ -189,7 +195,7 @@
               aria-labelledby="pills-all-tab"
             >
               <div class="row products__item">
-                <div class="col-6 col-lg-4">
+                <div class="col-12 col-md-6 col-lg-4">
                   <div class="card">
                     <img src="/asset/img/ip15.jpg" class="card-img-top" />
                     <div class="card-body">
@@ -209,7 +215,7 @@
                   </div>
                 </div>
 
-                <div class="col-6 col-lg-4">
+                <div class="col-12 col-md-6 col-lg-4">
                   <div class="card">
                     <img src="/asset/img/ip15.jpg" class="card-img-top" />
                     <div class="card-body">
@@ -229,7 +235,7 @@
                   </div>
                 </div>
 
-                <div class="col-6 col-lg-4">
+                <div class="col-12 col-md-6 col-lg-4">
                   <div class="card">
                     <img src="/asset/img/ip15.jpg" class="card-img-top" />
                     <div class="card-body">
@@ -249,7 +255,7 @@
                   </div>
                 </div>
 
-                <div class="col-6 col-lg-4">
+                <div class="col-12 col-md-6 col-lg-4">
                   <div class="card">
                     <img src="/asset/img/ip15.jpg" class="card-img-top" />
                     <div class="card-body">
@@ -269,7 +275,7 @@
                   </div>
                 </div>
 
-                <div class="col-6 col-lg-4">
+                <div class="col-12 col-md-6 col-lg-4">
                   <div class="card">
                     <img src="/asset/img/ip15.jpg" class="card-img-top" />
                     <div class="card-body">
@@ -289,7 +295,7 @@
                   </div>
                 </div>
 
-                <div class="col-6 col-lg-4">
+                <div class="col-12 col-md-6 col-lg-4">
                   <div class="card">
                     <img src="/asset/img/ip15.jpg" class="card-img-top" />
                     <div class="card-body">
@@ -420,6 +426,70 @@
         </div>
       </div>
     </footer>
+
+    <!-- CART -->
+    <section>
+      <div
+        class="offcanvas offcanvas-end cart"
+        tabindex="-1"
+        id="offcanvasRight"
+        aria-labelledby="offcanvasRightLabel"
+      >
+        <div class="offcanvas-header cart-header">
+          <h5 class="offcanvas-title" id="offcanvasRightLabel">CART</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="offcanvas-body cart-body">
+          <div class="cart-item">
+            <img
+              src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-pro-12-select-wifi-spacegray-202003_FMT_WHH?wid=940&hei=1112&fmt=png-alpha&qlt=80&.v=1583553704156"
+            />
+            <p>iPad Pro</p>
+            <div class="adjustQty">
+              <button class="btn-qty"><i class="fa fa-angle-left"></i></button>
+              <span class="cart-qty">1</span>
+              <button class="btn-qty"><i class="fa fa-angle-right"></i></button>
+            </div>
+            <p>$999</p>
+            <button class="btn-clearItem">
+              <i class="fa fa-trash-alt"></i>
+            </button>
+          </div>
+          <div class="cart-item">
+            <img
+              src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-pro-12-select-wifi-spacegray-202003_FMT_WHH?wid=940&hei=1112&fmt=png-alpha&qlt=80&.v=1583553704156"
+            />
+            <p>iPad Pro</p>
+            <div class="adjustQty">
+              <button class="btn-qty"><i class="fa fa-angle-left"></i></button>
+              <span class="cart-qty">1</span>
+              <button class="btn-qty"><i class="fa fa-angle-right"></i></button>
+            </div>
+            <p>$999</p>
+            <button class="btn-clearItem">
+              <i class="fa fa-trash-alt"></i>
+            </button>
+          </div>
+        </div>
+        <div class="cart-footer text-end m-4">
+          <h3>Total: <span class="total">$1998</span></h3>
+          <div>
+            <button id="btnPurchase" type="button" class="btn btn-primary mx-2">
+              Purchase <i class="fa fa-credit-card"></i>
+            </button>
+            <button id="btnClearCart" type="button" class="btn btn-danger">
+              Clear Cart <i class="fa fa-trash-alt"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Bootstrap JavaScript Libraries -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"

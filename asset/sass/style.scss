@@ -10,7 +10,6 @@ $text-font-size: 16px;
 // MIXIN
 @mixin btn-style($padding, $border-radius) {
   padding: $padding;
-  letter-spacing: 1px;
   font-weight: 500;
   border-radius: $border-radius;
   color: $background-color-2;
@@ -143,7 +142,7 @@ header {
     @media screen and (max-width: 768px) {
       margin-right: 16px;
     }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 576px) {
       margin-right: 12px;
     }
   }
@@ -171,14 +170,35 @@ header {
       position: absolute;
       background-color: $background-color-2;
       color: $text-color-2;
+      border: 1px solid $text-color-2;
       border-radius: 50%;
       width: 20px;
       height: 20px;
-      line-height: 20px;
+      line-height: 18px;
       font-size: 14px;
       text-align: center;
       left: 20px;
       bottom: 32px;
+      @media screen and (max-width: 992px) {
+        width: 16px;
+        height: 16px;
+        line-height: 15px;
+        font-size: 12px;
+        left: 16px;
+        bottom: 24px;
+      }
+      @media screen and (max-width: 768px) {
+        left: 12px;
+        bottom: 20px;
+      }
+      @media screen and (max-width: 576px) {
+        width: 14px;
+        height: 14px;
+        line-height: 13px;
+        font-size: 9px;
+        left: 9px;
+        bottom: 16px;
+      }
     }
   }
 }
@@ -397,6 +417,63 @@ section.products {
       .card-body h5 {
         color: $text-color-2;
       }
+    }
+  }
+}
+
+// STORE CART
+section .cart {
+  background-color: $background-color-2;
+  justify-content: space-evenly;
+  h5 {
+    font-size: $title-font-size;
+    color: $text-color-2;
+    margin-left: 150px;
+  }
+  .cart-body {
+    border-radius: 5px;
+    margin: 2% 4%;
+    box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
+    padding: 2%;
+    background-image: $background-gradient;
+    .cart-item {
+      background-color: #fff;
+      border-radius: 5px;
+      border: 1px solid #ced4da;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      margin: 0.5rem;
+      p {
+        margin-bottom: 0;
+      }
+      img {
+        width: 15%;
+        align-self: center;
+      }
+      button {
+        border: none;
+        background: none;
+        outline: none;
+        cursor: pointer;
+      }
+      .btn-qty {
+        font-size: 12px;
+        border: 1px solid black;
+        border-radius: 50%;
+        padding: 0 5px;
+        margin: 0 5px 1px;
+      }
+    }
+  }
+  .cart-footer {
+    &::before {
+      content: "";
+      width: 100%;
+      height: 1px;
+      background-color: #ced4da;
+      display: block;
+      margin-bottom: 1rem;
     }
   }
 }
