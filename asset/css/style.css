@@ -293,10 +293,6 @@ section.admin {
   margin-bottom: 1rem; }
 #myModal .spIcon {
   height: 38px; }
-#myModal .sp-thongbao {
-  color: red;
-  margin-left: 2px;
-  display: none; }
 
 section.myCarousel h5 {
   font-weight: bold; }
