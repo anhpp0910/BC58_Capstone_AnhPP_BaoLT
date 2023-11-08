@@ -275,6 +275,12 @@ section.admin {
       color: whitesmoke !important;
       background-color: #0a58ca !important;
       opacity: 0.8 !important; }
+  section.admin .searchPhone > div {
+    margin-left: 940px; }
+  section.admin #btnSearch {
+    height: 38px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0; }
 
 #myModal .modal-content {
   padding: 1rem; }
@@ -293,6 +299,10 @@ section.admin {
   margin-bottom: 1rem; }
 #myModal .spIcon {
   height: 38px; }
+#myModal .sp-thongbao {
+  color: red;
+  margin-left: 2px;
+  display: none; }
 
 section.myCarousel h5 {
   font-weight: bold; }

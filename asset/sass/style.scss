@@ -331,6 +331,14 @@ section.admin {
   #btnAddPhone {
     @include btn-style(10px 20px, 4px);
   }
+  .searchPhone > div {
+    margin-left: 940px;
+  }
+  #btnSearch {
+    height: 38px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
 }
 
 // ADMIN MODAL
@@ -356,6 +364,11 @@ section.admin {
   }
   .spIcon {
     height: 38px;
+  }
+  .sp-thongbao {
+    color: red;
+    margin-left: 2px;
+    display: none;
   }
 }
 
