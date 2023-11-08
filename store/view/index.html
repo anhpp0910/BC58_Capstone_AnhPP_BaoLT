@@ -56,12 +56,13 @@
           </a>
         </div>
         <div class="header__cart">
-          <div class="cartQty"><span class="spCartQty">3</span></div>
+          <div class="cartQty"><span class="spCartQty">0</span></div>
           <a
             href="#"
             data-bs-toggle="offcanvas"
             data-bs-target="#offcanvasRight"
             aria-controls="offcanvasRight"
+            id="cartIcon"
             ><i class="fa-solid fa-cart-shopping"></i> CART</a
           >
         </div>
@@ -161,12 +162,12 @@
             <li class="nav-item" role="presentation">
               <button
                 class="nav-link"
-                id="pills-illustration-tab"
+                id="pills-apple-tab"
                 data-bs-toggle="pill"
-                data-bs-target="#pills-illustration"
+                data-bs-target="#pills-apple"
                 type="button"
                 role="tab"
-                aria-controls="pills-illustration"
+                aria-controls="pills-apple"
                 aria-selected="false"
               >
                 Apple
@@ -175,12 +176,12 @@
             <li class="nav-item" role="presentation">
               <button
                 class="nav-link"
-                id="pills-photography-tab"
+                id="pills-samsung-tab"
                 data-bs-toggle="pill"
-                data-bs-target="#pills-photography"
+                data-bs-target="#pills-samsung"
                 type="button"
                 role="tab"
-                aria-controls="pills-photography"
+                aria-controls="pills-samsung"
                 aria-selected="false"
               >
                 Samsung
@@ -194,143 +195,23 @@
               role="tabpanel"
               aria-labelledby="pills-all-tab"
             >
-              <div class="row products__item">
-                <div class="col-12 col-md-6 col-lg-4">
-                  <div class="card">
-                    <img src="/asset/img/ip15.jpg" class="card-img-top" />
-                    <div class="card-body">
-                      <h5 class="card-title phoneName">
-                        <i class="fab fa-apple"></i> iPhone15
-                      </h5>
-                      <p class="card-text desc">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      </p>
-                      <p class="price">$799</p>
-                      <div class="buy">
-                        <button class="btn btn-buy">
-                          <i class="fa fa-shopping-cart"></i> Buy now
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-4">
-                  <div class="card">
-                    <img src="/asset/img/ip15.jpg" class="card-img-top" />
-                    <div class="card-body">
-                      <h5 class="card-title phoneName">
-                        <i class="fab fa-apple"></i> iPhone15
-                      </h5>
-                      <p class="card-text desc">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      </p>
-                      <p class="price">$799</p>
-                      <div class="buy">
-                        <button class="btn btn-buy">
-                          <i class="fa fa-shopping-cart"></i> Buy now
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-4">
-                  <div class="card">
-                    <img src="/asset/img/ip15.jpg" class="card-img-top" />
-                    <div class="card-body">
-                      <h5 class="card-title phoneName">
-                        <i class="fab fa-apple"></i> iPhone15
-                      </h5>
-                      <p class="card-text desc">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      </p>
-                      <p class="price">$799</p>
-                      <div class="buy">
-                        <button class="btn btn-buy">
-                          <i class="fa fa-shopping-cart"></i> Buy now
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-4">
-                  <div class="card">
-                    <img src="/asset/img/ip15.jpg" class="card-img-top" />
-                    <div class="card-body">
-                      <h5 class="card-title phoneName">
-                        <i class="fab fa-apple"></i> iPhone15
-                      </h5>
-                      <p class="card-text desc">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      </p>
-                      <p class="price">$799</p>
-                      <div class="buy">
-                        <button class="btn btn-buy">
-                          <i class="fa fa-shopping-cart"></i> Buy now
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-4">
-                  <div class="card">
-                    <img src="/asset/img/ip15.jpg" class="card-img-top" />
-                    <div class="card-body">
-                      <h5 class="card-title phoneName">
-                        <i class="fab fa-apple"></i> iPhone15
-                      </h5>
-                      <p class="card-text desc">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      </p>
-                      <p class="price">$799</p>
-                      <div class="buy">
-                        <button class="btn btn-buy">
-                          <i class="fa fa-shopping-cart"></i> Buy now
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-4">
-                  <div class="card">
-                    <img src="/asset/img/ip15.jpg" class="card-img-top" />
-                    <div class="card-body">
-                      <h5 class="card-title phoneName">
-                        <i class="fab fa-apple"></i> iPhone15
-                      </h5>
-                      <p class="card-text desc">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      </p>
-                      <p class="price">$799</p>
-                      <div class="buy">
-                        <button class="btn btn-buy">
-                          <i class="fa fa-shopping-cart"></i> Buy now
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <div class="row products__item"></div>
             </div>
             <div
               class="tab-pane fade"
-              id="pills-illustration"
+              id="pills-apple"
               role="tabpanel"
-              aria-labelledby="pills-illustration-tab"
+              aria-labelledby="pills-apple-tab"
             >
-              Apple Filter
+              <div class="row products__item"></div>
             </div>
             <div
               class="tab-pane fade"
-              id="pills-photography"
+              id="pills-samsung"
               role="tabpanel"
-              aria-labelledby="pills-photography-tab"
+              aria-labelledby="pills-samsung-tab"
             >
-              Samsung Filter
+              <div class="row products__item"></div>
             </div>
           </div>
         </div>
@@ -444,38 +325,7 @@
             aria-label="Close"
           ></button>
         </div>
-        <div class="offcanvas-body cart-body">
-          <div class="cart-item">
-            <img
-              src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-pro-12-select-wifi-spacegray-202003_FMT_WHH?wid=940&hei=1112&fmt=png-alpha&qlt=80&.v=1583553704156"
-            />
-            <p>iPad Pro</p>
-            <div class="adjustQty">
-              <button class="btn-qty"><i class="fa fa-angle-left"></i></button>
-              <span class="cart-qty">1</span>
-              <button class="btn-qty"><i class="fa fa-angle-right"></i></button>
-            </div>
-            <p>$999</p>
-            <button class="btn-clearItem">
-              <i class="fa fa-trash-alt"></i>
-            </button>
-          </div>
-          <div class="cart-item">
-            <img
-              src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-pro-12-select-wifi-spacegray-202003_FMT_WHH?wid=940&hei=1112&fmt=png-alpha&qlt=80&.v=1583553704156"
-            />
-            <p>iPad Pro</p>
-            <div class="adjustQty">
-              <button class="btn-qty"><i class="fa fa-angle-left"></i></button>
-              <span class="cart-qty">1</span>
-              <button class="btn-qty"><i class="fa fa-angle-right"></i></button>
-            </div>
-            <p>$999</p>
-            <button class="btn-clearItem">
-              <i class="fa fa-trash-alt"></i>
-            </button>
-          </div>
-        </div>
+        <div class="offcanvas-body cart-body"></div>
         <div class="cart-footer text-end m-4">
           <h3>Total: <span class="total">$1998</span></h3>
           <div>
@@ -502,5 +352,13 @@
       integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
       crossorigin="anonymous"
     ></script>
+    <!-- Axios -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.0/axios.min.js"
+      integrity="sha512-WrdC3CE9vf1nBf58JHepuWT4x24uTacky9fuzw2g/3L9JkihgwZ6Cfv+JGTtNyosOhEmttMtEZ6H3qJWfI7gIQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="/store/index.js"></script>
   </body>
 </html>

@@ -176,6 +176,7 @@ header {
       height: 20px;
       line-height: 18px;
       font-size: 14px;
+      font-weight: 500;
       text-align: center;
       left: 20px;
       bottom: 32px;
@@ -409,21 +410,30 @@ section.products {
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
       rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
     transition: all 0.5s;
-    .card-body h5 {
-      font-size: $title-font-size;
-      transition: all 0.5s;
-    }
-    .price {
-      font-size: 1.5rem;
-    }
-    .btn-buy {
-      @include btn-style(8px, 0.375rem);
-    }
     &:hover {
       border: 3px solid $text-color-1;
       cursor: pointer;
       .card-body h5 {
         color: $text-color-2;
+      }
+    }
+    img {
+      max-width: 200px;
+      margin: 30px auto 10px;
+    }
+    .card-body {
+      h5 {
+        font-size: $title-font-size;
+        transition: all 0.5s;
+      }
+      svg {
+        width: 30px;
+      }
+      .price {
+        font-size: 1.5rem;
+      }
+      .btn-buy {
+        @include btn-style(8px, 0.375rem);
       }
     }
   }
@@ -433,6 +443,7 @@ section.products {
 section .cart {
   background-color: $background-color-2;
   justify-content: space-evenly;
+  width: 600px !important;
   h5 {
     font-size: $title-font-size;
     color: $text-color-2;
@@ -450,13 +461,15 @@ section .cart {
       border: 1px solid #ced4da;
       display: flex;
       align-items: center;
-      justify-content: space-evenly;
+      justify-content: space-around;
       margin: 0.5rem;
+      padding: 10px 0;
       p {
+        text-align: left;
         margin-bottom: 0;
       }
       img {
-        width: 15%;
+        height: 50px;
         align-self: center;
       }
       button {

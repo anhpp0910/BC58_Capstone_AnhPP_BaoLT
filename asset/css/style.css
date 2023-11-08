@@ -130,6 +130,7 @@ header {
       height: 20px;
       line-height: 18px;
       font-size: 14px;
+      font-weight: 500;
       text-align: center;
       left: 20px;
       bottom: 32px; }
@@ -347,12 +348,22 @@ section.products .card {
   border: 3px solid transparent;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
   transition: all 0.5s; }
+  section.products .card:hover {
+    border: 3px solid #0d6efd;
+    cursor: pointer; }
+    section.products .card:hover .card-body h5 {
+      color: #0a58ca; }
+  section.products .card img {
+    max-width: 200px;
+    margin: 30px auto 10px; }
   section.products .card .card-body h5 {
     font-size: 30px;
     transition: all 0.5s; }
-  section.products .card .price {
+  section.products .card .card-body svg {
+    width: 30px; }
+  section.products .card .card-body .price {
     font-size: 1.5rem; }
-  section.products .card .btn-buy {
+  section.products .card .card-body .btn-buy {
     padding: 8px;
     font-weight: 500;
     border-radius: 0.375rem;
@@ -360,19 +371,15 @@ section.products .card {
     background-color: #0a58ca;
     outline: none;
     transition: all 0.5s; }
-    section.products .card .btn-buy:hover {
+    section.products .card .card-body .btn-buy:hover {
       color: whitesmoke !important;
       background-color: #0a58ca !important;
       opacity: 0.8 !important; }
-  section.products .card:hover {
-    border: 3px solid #0d6efd;
-    cursor: pointer; }
-    section.products .card:hover .card-body h5 {
-      color: #0a58ca; }
 
 section .cart {
   background-color: whitesmoke;
-  justify-content: space-evenly; }
+  justify-content: space-evenly;
+  width: 600px !important; }
   section .cart h5 {
     font-size: 30px;
     color: #0a58ca;
@@ -389,12 +396,14 @@ section .cart {
       border: 1px solid #ced4da;
       display: flex;
       align-items: center;
-      justify-content: space-evenly;
-      margin: 0.5rem; }
+      justify-content: space-around;
+      margin: 0.5rem;
+      padding: 10px 0; }
       section .cart .cart-body .cart-item p {
+        text-align: left;
         margin-bottom: 0; }
       section .cart .cart-body .cart-item img {
-        width: 15%;
+        height: 50px;
         align-self: center; }
       section .cart .cart-body .cart-item button {
         border: none;
