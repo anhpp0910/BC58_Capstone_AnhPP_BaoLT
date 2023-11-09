@@ -90,9 +90,11 @@ const renderCart = (cartPhones) => {
   cartPhones.forEach((phone) => {
     htmls += `
         <div class="cart-item">
+        <div class="cart-phoneImg">
         <img
           src="${phone.img}"
         />
+        </div>
         <div class="cart-phoneName">
         <p>${phone.name}</p>
         </div>
