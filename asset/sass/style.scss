@@ -407,6 +407,7 @@ section.products {
     border-radius: 1rem;
     overflow: hidden;
     border: 3px solid transparent;
+    min-height: 500px;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
       rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
     transition: all 0.5s;
@@ -447,7 +448,7 @@ section .cart {
   h5 {
     font-size: $title-font-size;
     color: $text-color-2;
-    margin-left: 150px;
+    margin-left: 250px;
   }
   .cart-body {
     border-radius: 5px;
@@ -477,6 +478,9 @@ section .cart {
         background: none;
         outline: none;
         cursor: pointer;
+      }
+      .cart-phoneName {
+        min-width: 210px;
       }
       .btn-qty {
         font-size: 12px;

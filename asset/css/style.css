@@ -346,6 +346,7 @@ section.products .card {
   border-radius: 1rem;
   overflow: hidden;
   border: 3px solid transparent;
+  min-height: 500px;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
   transition: all 0.5s; }
   section.products .card:hover {
@@ -383,7 +384,7 @@ section .cart {
   section .cart h5 {
     font-size: 30px;
     color: #0a58ca;
-    margin-left: 150px; }
+    margin-left: 250px; }
   section .cart .cart-body {
     border-radius: 5px;
     margin: 2% 4%;
@@ -410,6 +411,8 @@ section .cart {
         background: none;
         outline: none;
         cursor: pointer; }
+      section .cart .cart-body .cart-item .cart-phoneName {
+        min-width: 210px; }
       section .cart .cart-body .cart-item .btn-qty {
         font-size: 12px;
         border: 1px solid black;

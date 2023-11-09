@@ -66,12 +66,6 @@ renderPhones = (phonesList, idTheDiv) => {
 
 const cartPhones = [];
 
-class CartItem {
-  constructor(id, img, name, price) {
-    (this.id = id), (this.img = img), (this.name = name), (this.price = price);
-  }
-}
-
 const addToCart = (id) => {
   // Call API lấy thông tin phone
   const promise = axios({
@@ -80,17 +74,10 @@ const addToCart = (id) => {
   });
   promise
     .then((res) => {
-      const addPhone = res.data;
-      const cartPhone = new CartItem(
-        addPhone.id,
-        addPhone.img,
-        addPhone.name,
-        addPhone.price
-      );
+      const cartPhone = res.data;
       cartPhones.push(cartPhone);
       $("#cartIcon").click();
       $("header .cartQty").innerHTML = `${cartPhones.length}`;
-
       renderCart(cartPhones);
     })
     .catch((err) => {
@@ -106,7 +93,9 @@ const renderCart = (cartPhones) => {
         <img
           src="${phone.img}"
         />
+        <div class="cart-phoneName">
         <p>${phone.name}</p>
+        </div>
         <div class="adjustQty">
           <button class="btn-qty"><i class="fa fa-angle-left"></i></button>
           <span class="cart-qty">1</span>
