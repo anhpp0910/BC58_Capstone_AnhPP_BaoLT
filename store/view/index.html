@@ -56,7 +56,7 @@
           </a>
         </div>
         <div class="header__cart">
-          <div class="cartQty"><span class="spCartQty">0</span></div>
+          <div class="cartQty"><span id="totalPhones">0</span></div>
           <a
             href="#"
             data-bs-toggle="offcanvas"
@@ -325,20 +325,72 @@
             aria-label="Close"
           ></button>
         </div>
-        <div class="offcanvas-body cart-body"></div>
+        <div class="offcanvas-body cart-body">
+          <p class="empty-cart">
+            Looks Like You Haven't Added <br />
+            Any Product In The Cart
+          </p>
+        </div>
         <div class="cart-footer text-end m-4">
-          <h3>Total: <span class="total">$1998</span></h3>
+          <h3>Total: <span id="totalPrice">$0</span></h3>
           <div>
-            <button id="btnPurchase" type="button" class="btn btn-primary mx-2">
+            <button
+              id="btnPurchase"
+              type="button"
+              class="btn btn-primary mx-2"
+              disabled="true"
+              data-bs-toggle="modal"
+              data-bs-target="#purchaseModal"
+            >
               Purchase <i class="fa fa-credit-card"></i>
             </button>
-            <button id="btnClearCart" type="button" class="btn btn-danger">
+            <button
+              id="btnClearCart"
+              type="button"
+              class="btn btn-danger"
+              disabled="true"
+            >
               Clear Cart <i class="fa fa-trash-alt"></i>
             </button>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- PURCHASE MODAL -->
+    <div
+      class="modal fade"
+      id="purchaseModal"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+      tabindex="-1"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              ORDER SUCCESSFUL
+            </h1>
+          </div>
+          <div class="modal-body text-center">
+            <p>Your order has been placed!!!</p>
+            <p class="mb-0">Thanks for shopping with us &#128150;</p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              id="continueToShop"
+              class="btn btn-primary"
+              data-bs-dismiss="modal"
+            >
+              Continue to shop
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Bootstrap JavaScript Libraries -->
     <script
@@ -359,6 +411,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script src="/store/index.js"></script>
+    <script src="/store/model/model.js"></script>
+    <script src="/store/controller/controller.js"></script>
   </body>
 </html>
