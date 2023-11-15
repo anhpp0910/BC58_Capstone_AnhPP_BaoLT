@@ -34,6 +34,9 @@
   </head>
 
   <body>
+    <!-- LOADER -->
+    <div id="loader"></div>
+
     <!-- HEADER -->
     <header>
       <div
@@ -81,12 +84,12 @@
           </div>
         </div>
         <div class="m-3 d-flex justify-content-end align-items-center">
-          <div class="input-group w-25 me-3 searchPhone">
+          <div class="input-group w-25 me-3 searchByName">
             <input
               type="text"
               class="form-control"
               placeholder="Search by Phone Name"
-              id="searchPhone"
+              id="searchName"
             />
             <div class="input-group-prepend">
               <button class="input-group-text" id="btnSearch">
@@ -95,15 +98,15 @@
             </div>
           </div>
           <div class="sortByPrice">
-            <select class="form-select">
-              <option selected>Sort by Price</option>
-              <option value="1">Low to high</option>
-              <option value="2">High to low</option>
+            <select class="form-select" id="sortByPrice">
+              <option selected value="default">Sort by Price</option>
+              <option value="lowToHigh">Low to high</option>
+              <option value="highToLow">High to low</option>
             </select>
           </div>
         </div>
 
-        <table class="table display" id="myTable">
+        <table class="table display text-center" id="myTable">
           <thead>
             <tr>
               <th>#</th>
@@ -217,8 +220,8 @@
     <div
       class="modal fade"
       id="myModal"
-      data-keyboard="false"
-      data-backdrop="static"
+      data-bs-keyboard="false"
+      data-bs-backdrop="static"
     >
       <div class="modal-dialog">
         <div class="modal-content">
@@ -375,7 +378,12 @@
 
           <!-- MODAL FOOTER -->
           <div class="modal-footer" id="modal-footer">
-            <button id="btnAdd" type="button" class="btn btn-primary">
+            <button
+              id="btnAdd"
+              type="button"
+              class="btn btn-primary"
+              onclick="createPhone()"
+            >
               Add
             </button>
             <button
@@ -383,6 +391,7 @@
               type="button"
               class="btn btn-success"
               disabled="true"
+              onclick="updatePhone()"
             >
               Update
             </button>
@@ -390,7 +399,8 @@
               id="btnClose"
               type="button"
               class="btn btn-danger"
-              data-dismiss="modal"
+              data-bs-dismiss="modal"
+              onclick="closeModal()"
             >
               Close
             </button>
@@ -411,5 +421,22 @@
       integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
       crossorigin="anonymous"
     ></script>
+
+    <!-- Axios -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.1/axios.min.js"
+      integrity="sha512-m9S8W3a9hhBHPFAbEIaG7J9P92dzcAWwM42VvJp5n1/M599ldK6Z2st2SfJGsX0QR4LfCVr681vyU5vW8d218w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- validate -->
+    <script src="/admin/validate.js"></script>
+
+    <!-- controller -->
+    <script src="/admin/controller.js"></script>
+
+    <!-- my js -->
+    <script src="/admin/admin.js"></script>
   </body>
 </html>
