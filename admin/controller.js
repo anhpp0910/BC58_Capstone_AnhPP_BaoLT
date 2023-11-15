@@ -25,7 +25,7 @@ function renderPhoneList(phoneArr) {
 
 function getDataForm() {
   var ten = document.getElementById("phoneName").value;
-  var gia = document.getElementById("price").value;
+  var gia = document.getElementById("price").value * 1;
   var manHinh = document.getElementById("screen").value;
   var camSau = document.getElementById("backCamera").value;
   var camTruoc = document.getElementById("frontCamera").value;
