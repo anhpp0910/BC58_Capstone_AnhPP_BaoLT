@@ -34,6 +34,9 @@
   </head>
 
   <body>
+    <!-- LOADER -->
+    <div id="loader"></div>
+
     <!-- HEADER -->
     <header>
       <div
@@ -379,8 +382,6 @@
               id="btnAdd"
               type="button"
               class="btn btn-primary"
-              data-bs-toggle="modal"
-              data-bs-target="#myModal"
               onclick="createPhone()"
             >
               Add
@@ -389,8 +390,6 @@
               id="btnUpdate"
               type="button"
               class="btn btn-success"
-              data-bs-toggle="modal"
-              data-bs-target="#myModal"
               disabled="true"
               onclick="updatePhone()"
             >
@@ -430,6 +429,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+
+    <!-- validate -->
+    <script src="/admin/validate.js"></script>
 
     <!-- controller -->
     <script src="/admin/controller.js"></script>

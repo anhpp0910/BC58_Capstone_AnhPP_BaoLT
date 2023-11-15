@@ -13,13 +13,13 @@ function renderPhoneList(phoneArr) {
                             <td>${phone.desc}</td>
                             <td>${phone.brand}</td>
                             <td>
-                                <button onclick='deletePhone(${
-                                  phone.id
-                                })' class="btn btn-danger">Delete</button>
                                 <button data-bs-toggle="modal"
                                 data-bs-target="#myModal" onclick='editPhone(${
                                   phone.id
-                                })' class="btn btn-warning mt-2">Edit</button>
+                                })' class="btn btn-warning">Edit</button>
+                                <button onclick='deletePhone(${
+                                  phone.id
+                                })' class="btn btn-danger mt-2">Delete</button>
                             </td>
                         </tr>`;
     contentHTML += trString;
@@ -48,6 +48,14 @@ function getDataForm() {
   };
 }
 
+function turnOnLoading() {
+  document.getElementById("loader").style.display = "block";
+}
+
+function turnOffLoading() {
+  document.getElementById("loader").style.display = "none";
+}
+
 // Xoá tất cả value của field input
 function clearFields() {
   document.getElementById("phoneName").value = "";
@@ -60,10 +68,32 @@ function clearFields() {
   document.getElementById("brand").value = "";
 }
 
+// Xoá tất cả error tip của field input
+function clearErrors() {
+  document.getElementById("tbPhoneName").style.display = "none";
+  document.getElementById("tbPhoneName").innerHTML = "";
+  document.getElementById("tbPrice").style.display = "none";
+  document.getElementById("tbPrice").innerHTML = "";
+  document.getElementById("tbScreen").style.display = "none";
+  document.getElementById("tbScreen").innerHTML = "";
+  document.getElementById("tbBackCamera").style.display = "none";
+  document.getElementById("tbBackCamera").innerHTML = "";
+  document.getElementById("tbFrontCamera").style.display = "none";
+  document.getElementById("tbFrontCamera").innerHTML = "";
+  document.getElementById("tbImage").style.display = "none";
+  document.getElementById("tbImage").innerHTML = "";
+  document.getElementById("tbDesc").style.display = "none";
+  document.getElementById("tbDesc").innerHTML = "";
+  document.getElementById("tbBrand").style.display = "none";
+  document.getElementById("tbBrand").innerHTML = "";
+}
+
 // Xoá tất cả input, error tip, enable/disable button Add/Update khi nhấn Close modal
 function closeModal() {
   clearFields();
-  // clearErrors();
+  clearErrors();
   document.getElementById("btnAdd").disabled = false;
   document.getElementById("btnUpdate").disabled = true;
+  document.getElementById("searchName").value = "";
+  document.getElementById("sortByPrice").value = "default";
 }
