@@ -81,12 +81,12 @@
           </div>
         </div>
         <div class="m-3 d-flex justify-content-end align-items-center">
-          <div class="input-group w-25 me-3 searchPhone">
+          <div class="input-group w-25 me-3 searchByName">
             <input
               type="text"
               class="form-control"
               placeholder="Search by Phone Name"
-              id="searchPhone"
+              id="searchName"
             />
             <div class="input-group-prepend">
               <button class="input-group-text" id="btnSearch">
@@ -95,15 +95,15 @@
             </div>
           </div>
           <div class="sortByPrice">
-            <select class="form-select">
-              <option selected>Sort by Price</option>
-              <option value="1">Low to high</option>
-              <option value="2">High to low</option>
+            <select class="form-select" id="sortByPrice">
+              <option selected value="default">Sort by Price</option>
+              <option value="lowToHigh">Low to high</option>
+              <option value="highToLow">High to low</option>
             </select>
           </div>
         </div>
 
-        <table class="table display" id="myTable">
+        <table class="table display text-center" id="myTable">
           <thead>
             <tr>
               <th>#</th>
@@ -217,8 +217,8 @@
     <div
       class="modal fade"
       id="myModal"
-      data-keyboard="false"
-      data-backdrop="static"
+      data-bs-keyboard="false"
+      data-bs-backdrop="static"
     >
       <div class="modal-dialog">
         <div class="modal-content">
@@ -391,6 +391,7 @@
               class="btn btn-success"
               data-bs-toggle="modal"
               data-bs-target="#myModal"
+              disabled="true"
               onclick="updatePhone()"
             >
               Update
@@ -400,6 +401,7 @@
               type="button"
               class="btn btn-danger"
               data-bs-dismiss="modal"
+              onclick="closeModal()"
             >
               Close
             </button>
