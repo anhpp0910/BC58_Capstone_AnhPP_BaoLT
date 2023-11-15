@@ -5,7 +5,7 @@ function renderPhoneList(phoneArr) {
     var trString = `<tr>
                             <td>${phone.id}</td>
                             <td>${phone.name}</td>
-                            <td>${phone.price}</td>
+                            <td>${phone.price.toLocaleString()}</td>
                             <td>${phone.screen}</td>
                             <td>${phone.backCamera}</td>
                             <td>${phone.frontCamera}</td>
@@ -13,9 +13,13 @@ function renderPhoneList(phoneArr) {
                             <td>${phone.desc}</td>
                             <td>${phone.brand}</td>
                             <td>
-                                <button onclick='deletePhone(${phone.id})' class="btn btn-danger">Delete</button>
+                                <button onclick='deletePhone(${
+                                  phone.id
+                                })' class="btn btn-danger">Delete</button>
                                 <button data-bs-toggle="modal"
-                                data-bs-target="#myModal" onclick='editPhone(${phone.id})' class="btn btn-warning mt-2">Edit</button>
+                                data-bs-target="#myModal" onclick='editPhone(${
+                                  phone.id
+                                })' class="btn btn-warning mt-2">Edit</button>
                             </td>
                         </tr>`;
     contentHTML += trString;
@@ -25,7 +29,7 @@ function renderPhoneList(phoneArr) {
 
 function getDataForm() {
   var ten = document.getElementById("phoneName").value;
-  var gia = document.getElementById("price").value * 1;
+  var gia = Number(document.getElementById("price").value);
   var manHinh = document.getElementById("screen").value;
   var camSau = document.getElementById("backCamera").value;
   var camTruoc = document.getElementById("frontCamera").value;
