@@ -253,7 +253,7 @@ footer {
 
 section.admin {
   background-color: whitesmoke;
-  width: 90%;
+  width: 100%;
   margin: 50px auto 100px; }
   section.admin .phoneBanner {
     background-color: #8ec5fc;
@@ -304,6 +304,21 @@ section.admin {
   color: red;
   margin-left: 2px;
   display: none; }
+
+  @media (max-width: 525.5px) {
+    #content.my-5 {
+      margin-top: 20px !important;
+      margin-bottom: 20px !important;
+    }
+    .col-lg-4,
+    .col-md-6 {
+      padding-left: 0;
+    }
+  
+    #selectList {
+      width: 100% !important;
+    }
+  }
 
 section.myCarousel h5 {
   font-weight: bold; }

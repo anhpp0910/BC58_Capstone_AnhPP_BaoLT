@@ -375,14 +375,23 @@
 
           <!-- MODAL FOOTER -->
           <div class="modal-footer" id="modal-footer">
-            <button id="btnAdd" type="button" class="btn btn-primary">
+            <button
+              id="btnAdd"
+              type="button"
+              class="btn btn-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#myModal"
+              onclick="createPhone()"
+            >
               Add
             </button>
             <button
               id="btnUpdate"
               type="button"
               class="btn btn-success"
-              disabled="true"
+              data-bs-toggle="modal"
+              data-bs-target="#myModal"
+              onclick="updatePhone()"
             >
               Update
             </button>
@@ -390,7 +399,7 @@
               id="btnClose"
               type="button"
               class="btn btn-danger"
-              data-dismiss="modal"
+              data-bs-dismiss="modal"
             >
               Close
             </button>
@@ -411,5 +420,19 @@
       integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
       crossorigin="anonymous"
     ></script>
+
+    <!-- Axios -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.1/axios.min.js"
+      integrity="sha512-m9S8W3a9hhBHPFAbEIaG7J9P92dzcAWwM42VvJp5n1/M599ldK6Z2st2SfJGsX0QR4LfCVr681vyU5vW8d218w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- controller -->
+    <script src="/admin/controller.js"></script>
+
+    <!-- my js -->
+    <script src="/admin/admin.js"></script>
   </body>
 </html>
