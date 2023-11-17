@@ -43,41 +43,41 @@ function updateCart() {
 
 // Render cart
 function renderCart() {
-  let htmls = "";
   cartPhones.forEach((phone, index) => {
-    if (phone.numberOfUnits > 0) {
-      htmls += `
-          <div class="cart-item">
-          <div class="cart-phoneImg">
-          <img
-            src="${phone.img}"
-          />
-          </div>
-          <div class="cart-phoneName">
-          <p>${phone.name}</p>
-          </div>
-          <div class="adjustQty">
-            <button class="btn-qty" onclick="changeNumberOfUnits('minus', ${
-              phone.id
-            })"><i class="fa fa-angle-left"></i></button>
-            <span class="cart-qty">${phone.numberOfUnits}</span>
-            <button class="btn-qty btn-qty-plus" onclick="changeNumberOfUnits('plus', ${
-              phone.id
-            })"><i class="fa fa-angle-right"></i></button>
-          </div>
-          <p>$${(phone.price * phone.numberOfUnits).toLocaleString()}</p>
-          <button class="btn-clearItem" onclick="clearPhoneFromCart(${
-            phone.id
-          })">
-            <i class="fa fa-trash-alt"></i>
-          </button>
-        </div>
-      </div>
-          `;
-    } else if (phone.numberOfUnits === 0) {
+    if (phone.numberOfUnits === 0) {
       cartPhones.splice(index, 1);
     }
   });
+  let htmls = "";
+  cartPhones.forEach((phone, index) => {
+    htmls += `
+      <div class="cart-item">
+      <div class="cart-phoneImg">
+      <img
+        src="${phone.img}"
+      />
+      </div>
+      <div class="cart-phoneName">
+      <p>${phone.name}</p>
+      </div>
+      <div class="adjustQty">
+        <button class="btn-qty" onclick="changeNumberOfUnits('minus', ${
+          phone.id
+        })"><i class="fa fa-angle-left"></i></button>
+        <span class="cart-qty">${phone.numberOfUnits}</span>
+        <button class="btn-qty btn-qty-plus" onclick="changeNumberOfUnits('plus', ${
+          phone.id
+        })"><i class="fa fa-angle-right"></i></button>
+      </div>
+      <p>$${(phone.price * phone.numberOfUnits).toLocaleString()}</p>
+      <button class="btn-clearItem" onclick="clearPhoneFromCart(${phone.id})">
+        <i class="fa fa-trash-alt"></i>
+      </button>
+    </div>
+  </div>
+      `;
+  });
+
   if (cartPhones.length !== 0) {
     $(".cart-body").innerHTML = htmls;
     $("#btnPurchase").disabled = false;
